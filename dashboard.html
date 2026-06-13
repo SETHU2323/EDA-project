@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Dashboard</title>
+
+<style>
+body{
+    font-family:Arial;
+    background:#f5f7fa;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom:20px;
+}
+
+.btn{
+    background:#2563eb;
+    color:white;
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Student Dashboard</h1>
+
+{% for project in projects %}
+
+<div class="card">
+
+<h2>{{ project.title }}</h2>
+
+<p>{{ project.description }}</p>
+
+<p><b>Due Date:</b> {{ project.due_date }}</p>
+
+<p><b>Status:</b> {{ project.status }}</p>
+
+<button class="btn">Submit Work</button>
+
+</div>
+
+{% endfor %}
+
+</body>
+</html>
